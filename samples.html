@@ -1,0 +1,4 @@
+<h2>Contoh Gambar Deteksi Tepi</h2>
+{% for sample in samples %}
+    <img src="{{ url_for('static', filename='uploads/' + sample) }}" width="300">
+{% endfor %}

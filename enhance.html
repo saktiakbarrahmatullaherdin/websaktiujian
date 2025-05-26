@@ -1,0 +1,11 @@
+<h2>Peningkatan Gambar</h2>
+<form method="post" enctype="multipart/form-data">
+    <input type="file" name="image">
+    <input type="submit" value="Proses">
+</form>
+{% if original %}
+<p>Gambar Asli:</p>
+<img src="{{ url_for('static', filename='uploads/' + original) }}" width="300">
+<p>Gambar Hasil:</p>
+<img src="{{ url_for('static', filename='uploads/' + processed) }}" width="300">
+{% endif %}

@@ -1,0 +1,16 @@
+<h2>Deteksi Tepi</h2>
+<form method="post" enctype="multipart/form-data">
+    <input type="file" name="image">
+    <select name="method">
+        <option value="canny">Canny</option>
+        <option value="sobel">Sobel</option>
+        <option value="laplacian">Laplacian</option>
+    </select>
+    <input type="submit" value="Deteksi">
+</form>
+{% if original %}
+<p>Gambar Asli:</p>
+<img src="{{ url_for('static', filename='uploads/' + original) }}" width="300">
+<p>Gambar Deteksi:</p>
+<img src="{{ url_for('static', filename='uploads/' + processed) }}" width="300">
+{% endif %}
